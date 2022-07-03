@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "seeds": "^2.3.1",
+    "sequelize": "^6.21.2"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seeds/seed.js"
+  },
+  "name": "develop",
+  "version": "1.0.0",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
