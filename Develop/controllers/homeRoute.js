@@ -1,16 +1,16 @@
 const router = require('express').Router();
-const { Dashboard } = require('../../models');
-const { Project,User } = require('../models');
+const { Post } = require('../../models');
+const { Post,User } = require('../models');
 const withAuth = require('../utils/auth');
 
 
 router.get('/', withAuth, async (req, res) => {
   try {
-    const userProject = await Dashboard.findAll({
+    const userPost = await Post.findAll({
       include
     });
 
-    const users = userData.map((project) => dashboard.get({ plain: true }));
+    const users = userData.map((post) => post.get({ plain: true }));
 
     res.render('homepage', {
       users,
