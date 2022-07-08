@@ -7,15 +7,12 @@ router.get("/", async (req, res) => {
     try{
         const homepageData = await Post.findAll(
             {
-                attributes: ["id", "title", "createdAt"],
-                include: {
-                    model: User,
-                    attributes: ["username"]
+                
+                include:[User]
+                   
                 }
-            }
-        ).catch((err) => {
-            res.json(err);
-        })
+            
+        )
         
         const posts = homepageData.map(post => post.get({plain: true}));
         
